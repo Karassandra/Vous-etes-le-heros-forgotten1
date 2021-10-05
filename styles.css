@@ -1,0 +1,85 @@
+body {
+  background-color: #260503;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "True Lies";
+  src: url("assets/fonts/True Lies.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("assets/fonts/Comfortaa-VariableFont_wght.ttf") format("truetype");
+}
+
+.game {
+  background-color: #340704;
+  width: 800px;
+  height: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  color: #e9e3dd;
+  font-family: "True Lies";
+  font-size: 100px;
+  max-height: 20px;
+  margin-bottom: 80px;
+}
+
+.chapitre1 {
+  display: flex;
+  color: #e9e3dd;
+  font-family: "Comfortaa";
+  font-size: 30px;
+  max-height: 5px;
+}
+
+.texte {
+  display: flex;
+  color: #e9e3dd;
+  font-family: "Comfortaa";
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  max-height: 5px;
+}
+
+img {
+  max-width: 700px;
+  max-height: 500px;
+  margin-bottom: 10px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  color: #010001;
+  background-color: #e2453a;
+  font-family: "Comfortaa";
+  border-radius: 5px;
+  border-color: #e2453a;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+button:hover {
+  background-color: #a01a08;
+  border-color: #a01a08;
+}
