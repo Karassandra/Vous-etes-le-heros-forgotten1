@@ -1,12 +1,84 @@
 let chaptersObj = {
-  waking_up: {
-    subtitle: "waking_up",
+  a_new_beginning: {
+    subtitle: "A new beginning",
     text: "You wake up not knowing where you are. The moon is glowing. The stars are shining. It’s your first time seeing it that bright… Wait… What’s your name again ?",
     img: "sky.jpg",
     option: [
       {
-        text: "",
-        action: "",
+        text: "Regardez devant toi",
+        action: "goToChapter('the_school')"
+      },
+    ],
+  },
+
+  the_school: {
+    subtitle: "The School",
+    text: "Suddenly, you see a building in front of you. A school. You get shiver through your spine. But why? You don’t comfortable looking at it. What should you do?",
+    img: "school_night.jpg",
+    option: [
+      {
+        text: "Exit",
+        action: "goToChapter('mort_beginning')"
+      },
+      {
+        text: "Go inside",
+        action: ""
+      },
+    ],
+  },
+
+  mort_beginning: {
+    subtitle: "Time to sleep again",
+    text: "You are starting to feel unwell. You’re getting dizzy and you’re out of breath very easily. What is happening?! Without being able to understand what’s happening to you, you drop to the ground and faint.",
+    img: "dizzy.jpg",
+    option: [
+      {
+        text: "Wake up",
+        action: "goToChapter('a_new_beginning_creepy')"
+      },
+    ],
+  },
+
+  a_new_beginning_creepy: {
+    subtitle: "A new beginning ?",
+    text: "You wake up not knowing where you are again. The moon is glowing. The stars are shining. It’s your first time seeing it that bright. O̵̦̙̎̊͌̈́̀̾̚ŕ̶͎̯̄͑̀ ̷̯͈̲̣̬͊̉͒͐i̸̼̖̎̀͗̒s̷͚̉͘͝ ̸̦͚͙̻͇͕̲́̀ȉ̴̧̺̞̳̮̲̌̚t̶̡̝͍̪͎̫̍̈ ? :)",
+    img: "sky.jpg",
+    option: [
+      {
+        text: "Regardez devant toi",
+        action: "goToChapter('the_school')"
+      },
+    ],
+  },
+  
+  a_picture_?: {
+    subtitle: "A picture ?",
+    text: "You decide to enter the school. It's filled with darkness. Nobody's here. You stumbled upon a picture on the ground. You crouch to have a better look at it. It's a little bit torn. There's two people on the picture. You recognize your face. Besides you is.... a girl... You get chills. She looks familiar but you can't a grip of who she is. For some reason, you're happy and sad at the same time. What should you do ?",
+    img: "picture.jpg",
+    option: [
+      {
+        text: "Leave it on the ground",
+        action: ""
+      },
+      {
+        text: "Put in pocket",
+        action: ""
+      },
+      {
+        text: "Tear it appart",
+        action: ""
+      },
+    ],
+  },
+
+  mort_picture: {
+    subtitle: "Time to sleep again",
+    text:
+    img:
+    option: [
+      {
+        text: "Wake up",
+        action: "goToChapter('a_new_beginning_creepy')"
       },
     ],
   },
@@ -45,7 +117,8 @@ let chaptersObj = {
 // };
 
 // let chaptersObj = {
-//   waking_up: chapitre1,
+//   a_new_beginning: chapitre1,
+//   the_school: chapitre2,
 //   picture1: chapitre2,
 //   shadow: chapitre3,
 //   shadow: chapitre3_1,
