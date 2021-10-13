@@ -5,6 +5,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
 }
 
 @font-face {
