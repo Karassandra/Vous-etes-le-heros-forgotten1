@@ -3,8 +3,8 @@ function impact() {
     goToChapter("the_decisive_choice_bad");
   } else if (picture == true) {
     goToChapter("the_decisive_choice_good");
-  }
-}
+  };
+};
 
 let chaptersObj = {
   a_new_beginning: {
@@ -226,7 +226,7 @@ mort_torture_2: {
 },
 };
 
-let picture = false;
+// let picture = false;
 
 // function isTrue() {
 //   picture = true;
@@ -246,12 +246,12 @@ function goToChapter(chapterName) {
 
   let choices = document.querySelector('.button');
   let choicesArr = chapitre.options;
-  console.log(optionsArr[length].action);
-  console.log(optionsArr.length);
+  console.log(choicesArr[length].action);
+  console.log(choicesArr.length);
 
   let button = "";
-  for (let i = 0; i < chapitre.option.length; i++) {
-    button += `<button onclick="${chapitre.option[i].action}">${chapitre.option[i].text}</button>`;
+  for (let i = 0; i < choicesArr.length; i++) {
+    button += `<button onclick="${choicesArr[i].action}">${choicesArr[i].text}</button>`;
   };
   document.querySelector(".menu").innerHTML = button;
 
