@@ -58,23 +58,23 @@ let chaptersObj = {
     option: [
       {
         text: "Leave it on the ground",
-        action: ""
+        action: "goToChapter('noise')"
       },
       {
         text: "Put in pocket",
-        action: ""
+        action: "goToChapter('noise')"
       },
       {
         text: "Tear it appart",
-        action: ""
+        action: "goToChapter('mort_picture')"
       },
     ],
   },
 
   mort_picture: {
-    subtitle: "Time to sleep again",
-    text:
-    img:
+    subtitle: "A sharp suprise",
+    text: "As you finished to shred the picture into pieces, a whisper behind you makes its entrance : - Ẇ̶̹̪́̿̉r̷̡̻̫̀̐̏͘ǒ̶̙̾̉̑͑̊ǹ̴̢g̸̮̉̀̓ ̴̳͇͇̔́c̶̣̼̪̞̲̺̔͆̚h̵͍̬̀ở̷̧̹̰̒̄i̸̧̼̥̼̊̿̔c̵̨͛͊̽e̵̥̤̫̞̅̏̈́̀͛͠ ̸̢̖̰̯̲̀͂͛͋a̶͚͈̯̅̐͋͌͗g̴̢̢̨̩͕̻̏͛á̶̬͊̐̑͘ḭ̴̢̰̹͙̗͗̒n̵̢͍̘̭͗̕ ̷̭̫̎͛̚~̴̠̣̬̱͉̄̎ . You get stabbed in the back violently 10 times. As you fall on the ground you have a glimpse of the shadow behind you. You give your last breath as you close your eyes.",
+    img: "stab.jpg",
     option: [
       {
         text: "Wake up",
@@ -83,26 +83,49 @@ let chaptersObj = {
     ],
   },
 
+noise: {
+  subtitle: "The hall",
+  text: "You continue to walk throughout the whole school. Suddenly, you hear a noise from the center hall. It seems like they’re footsteps. Maybe you’re not here alone after all !",
+  img: "hall.jpg",
+  option: [
+    {
+      text: "Follow the noise",
+      action: ""
+    },
+  ],
+},
+
+shadow_person: {
+  subtitle: "Shadow Person",
+  text: "Right as you enter the hall it became colder in an instance. You see something at the end of the hallway… It’s a shadow…  A person ? O̵̦̙̎̊͌̈́̀̾̚ŕ̶͎̯̄͑̀ ̷̯͈̲̣̬͊̉͒͐i̸̼̖̎̀͗̒s̷͚̉͘͝ ̸̦͚͙̻͇͕̲́̀ȉ̴̧̺̞̳̮̲̌̚t̶̡̝͍̪͎̫̍̈ :) . What should you do ?",
+  img: "shadow.jpg",
+  option: [
+    {
+      text: "Hit it",
+      action: ""
+    },
+    {
+      text: "Get close to it",
+      action: ""
+    },
+  ],
+},
+
+mort_shadow_person: {
+  subtitle: "That was quick",
+  text: "",
+  img: "",
+  option: [
+    {
+      text: "Wake up",
+      action: "goToChapter('a_new_beginning_creepy')"
+    },
+  ],
+},
+
 
 },
 
-// let chapitre2 = {
-//   subtitle: "picture1",
-//   text: "You decide to enter the school. It's filled with darkness. Nobody's here. You stumbled upon a picture on the ground. You crouch to have a better look at it. It's a little bit torn. There's two people on the picture. You recognize your face. Besides you is..... a girl... You get chills. She looks familiar but you can't a grip of who she is. For some reason, you're happy and sad at the same time. What do you do ?",
-//   img: "picture.jpg",
-// };
-
-// let chapitre3 = {
-//   subtitle: "shadow",
-//   text: "Right as you turn right you see a shadow at the end of the hallway. It's a person. O̵̦̙̎̊͌̈́̀̾̚ŕ̶͎̯̄͑̀ ̷̯͈̲̣̬͊̉͒͐i̸̼̖̎̀͗̒s̷͚̉͘͝ ̸̦͚͙̻͇͕̲́̀ȉ̴̧̺̞̳̮̲̌̚t̶̡̝͍̪͎̫̍̈ :) . What do you do ? ",
-//   img: "shadow.jpg",
-// };
-
-// let chapitre3_1 = {
-//   subtitle: "shadow",
-//   text: "Right as you turn right you see a shadow at the end of the hallway. It's a person. O̵̦̙̎̊͌̈́̀̾̚ŕ̶͎̯̄͑̀ ̷̯͈̲̣̬͊̉͒͐i̸̼̖̎̀͗̒s̷͚̉͘͝ ̸̦͚͙̻͇͕̲́̀ȉ̴̧̺̞̳̮̲̌̚t̶̡̝͍̪͎̫̍̈ :) . What do you do ? ",
-//   img: "shadow.jpg",
-// };
 
 // let chapitre4 = {
 //   subtitle: "picture2",
