@@ -244,9 +244,16 @@ function goToChapter(chapterName) {
   document.querySelector("p").innerHTML = chapitre.text;
   document.querySelector("img").src = chapitre.img;
 
+  let choices = document.querySelector('.button');
+  let choicesArr = chapitre.options;
+  console.log(optionsArr[length].action);
+  console.log(optionsArr.length);
+
   let button = "";
   for (let i = 0; i < chapitre.option.length; i++) {
     button += `<button onclick="${chapitre.option[i].action}">${chapitre.option[i].text}</button>`;
-  }
+  };
   document.querySelector(".menu").innerHTML = button;
-}
+
+  choices.innerHTML = button;
+};
