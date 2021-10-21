@@ -218,19 +218,35 @@ mort_torture_2: {
 },
 };
 
-// let chaptersObj = {
-//   a_new_beginning: chapitre1,
-//   the_school: chapitre2,
-//   picture1: chapitre2,
-//   shadow: chapitre3,
-//   shadow: chapitre3_1,
-//   picture2: chapitre4,
-//   picture2: chapitre4_1,
-// };
+let picture = false;
 
-// function goToChapter(chapterName) {
-//   let chapitre = chaptersObj;
-//   console.log(chapitre);
-//   console.log(chapitre.subtitle);
-//   console.log(chapitre.text);
+// function isTrue() {
+//   picture = true;
+//   goToChapter("the_decisive_choice_good");
 // }
+
+// function notTrue() {
+//   picture = false;
+//   goToChapter("the_decisive_choice_bad");
+// }
+
+function impact() {
+  if (picture == false) {
+    goToChapter("the_decisive_choice_bad");
+  } else if (picture == true) {
+    goToChapter("the_decisive_choice_good");
+  }
+}
+
+function goToChapter(chapterName) {
+  let chapitre = chaptersObj[chapterName];
+  document.querySelector("h2").innerHTML = chapitre.subtitle;
+  document.querySelector("p").innerHTML = chapitre.text;
+  document.querySelector("img").src = chapitre.img;
+
+  let button = "";
+  for (let i = 0; i < chapitre.option.length; i++) {
+    button += `<button onclick="${chapitre.option[i].action}">${chapitre.option[i].text}</button>`;
+  }
+  document.querySelector(".menu").innerHTML = button;
+}
