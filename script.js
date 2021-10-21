@@ -102,19 +102,48 @@ shadow_person: {
   option: [
     {
       text: "Hit it",
-      action: ""
+      action: "goToChapter('mort_shadow_person')"
     },
     {
       text: "Get close to it",
-      action: ""
+      action: "goToChapter('the_decisive_choice')"
     },
   ],
 },
 
 mort_shadow_person: {
   subtitle: "That was quick",
-  text: "",
-  img: "",
+  text: "As you run to hit the shadowy figure, it turns so fast that you stumble back almost falling. An immense pain arises from your neck. You can’t breathe nor speak. It’s at this moment that you realize that blood is dripping from your neck. You fall on your back trying your best to breath. It’s useless and you give your last breath as you close your eyes.",
+  img: "blood.jpg",
+  option: [
+    {
+      text: "Wake up",
+      action: "goToChapter('a_new_beginning_creepy')"
+    },
+  ],
+},
+
+// THE GOOD ROUTE
+the_decisive_choice_good: {
+  subtitle: "The decisive choice",
+  text: "As you approach the shadow, it asks you a question: -Do you have the picture ?",
+  img: "do_u_have_it.jpg",
+  option: [
+    {
+      text: "Yes",
+      action: ""
+    },
+    {
+      text: "Play dumb",
+      action: ""
+    },
+  ],
+},
+
+mort_torture: {
+  subtitle: "You shouldn't",
+  text: "You play dumb and say that you don’t know what it’s talking about. For a moment, silence fill the hallway. Then, you see a light. Bright red. It’s coming from their eyes. You start to feel dizzy and faint. You wake up in a dark room. You’re attached to a chair and right in front of you there’s the shadow person. -If you don’t remember I’ll make you remember ! You are tortured for hours and hours. You end up succumbing to your wounds. You give your last breath as you close your eyes.",
+  img: "torture.jpg",
   option: [
     {
       text: "Wake up",
@@ -128,12 +157,6 @@ mort_shadow_person: {
 
 
 // let chapitre4 = {
-//   subtitle: "picture2",
-//   text: "You decide to get close to it. It turns to face you. Huh ? It's a girl with long blond hair and beautiful blue eyes. As she see you, she shower you with a splendid smile. 'She looks cute.' You thought. 'You're late. I waited for you. Do you have the picture ?'",
-//   img: "picture2.jpg",
-// };
-
-// let chapitre4_1 = {
 //   subtitle: "picture2",
 //   text: "You decide to get close to it. It turns to face you. Huh ? It's a girl with long blond hair and beautiful blue eyes. As she see you, she shower you with a splendid smile. 'She looks cute.' You thought. 'You're late. I waited for you. Do you have the picture ?'",
 //   img: "picture2.jpg",
