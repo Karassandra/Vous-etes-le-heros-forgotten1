@@ -1,3 +1,11 @@
+function impact() {
+  if (picture == false) {
+    goToChapter("the_decisive_choice_bad");
+  } else if (picture == true) {
+    goToChapter("the_decisive_choice_good");
+  }
+}
+
 let chaptersObj = {
   a_new_beginning: {
     subtitle: "A new beginning",
@@ -229,14 +237,6 @@ let picture = false;
 //   picture = false;
 //   goToChapter("the_decisive_choice_bad");
 // }
-
-function impact() {
-  if (picture == false) {
-    goToChapter("the_decisive_choice_bad");
-  } else if (picture == true) {
-    goToChapter("the_decisive_choice_good");
-  }
-}
 
 function goToChapter(chapterName) {
   let chapitre = chaptersObj[chapterName];
