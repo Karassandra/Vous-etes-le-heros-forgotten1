@@ -11,6 +11,7 @@ let chaptersObj = {
     subtitle: "A new beginning",
     text: "You wake up not knowing where you are. The moon is glowing. The stars are shining. It’s your first time seeing it that bright… Wait… What’s your name again ?",
     img: "assets/sky.jpg",
+    video: "assets/eye_opening.mp4",
     option: [
       {
         text: "Regardez devant toi",
