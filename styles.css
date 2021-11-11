@@ -52,13 +52,13 @@ body {
   font-family: "Comfortaa";
   margin-left: 50px;
   margin-right: 50px;
-  margin-bottom: 50px;
-  height: 5px;
+  /* margin-bottom: 50px; */
+  /* max-height: 5px; */
 }
 
 img {
   max-width: 700px;
-  max-height: 500px;
+  /* max-height: 500px; */
   margin-bottom: 10px;
 }
 

@@ -239,10 +239,10 @@ function goToChapter(chapterName) {
   document.querySelector("p").innerHTML = chapitre.text;
   document.querySelector("img").src = chapitre.img;
 
-  let choices = document.querySelector(".button");
+  // let choices = document.querySelector(".button");
   let choicesArr = chapitre.option;
-  console.log(choicesArr[length].action);
-  console.log(choicesArr.length);
+  // console.log(choicesArr[length].action);
+  // console.log(choicesArr.length);
 
   let button = "";
   for (let i = 0; i < choicesArr.length; i++) {
@@ -250,3 +250,5 @@ function goToChapter(chapterName) {
   }
   document.querySelector(".menu").innerHTML = button;
 }
+
+goToChapter("a_new_beginning");
