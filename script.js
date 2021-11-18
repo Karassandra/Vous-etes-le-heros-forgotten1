@@ -52,6 +52,7 @@ let chaptersObj = {
     subtitle: "A new beginning ?",
     text: "You wake up not knowing where you are again. The moon is glowing. The stars are shining. It’s your first time seeing it that bright. O̵̦̙̎̊͌̈́̀̾̚ŕ̶͎̯̄͑̀ ̷̯͈̲̣̬͊̉͒͐i̸̼̖̎̀͗̒s̷͚̉͘͝ ̸̦͚͙̻͇͕̲́̀ȉ̴̧̺̞̳̮̲̌̚t̶̡̝͍̪͎̫̍̈ ? :)",
     img: "assets/sky.jpg",
+    video: "assets/eye_opening.mp4",
     option: [
       {
         text: "Regardez devant toi",
@@ -96,6 +97,7 @@ let chaptersObj = {
     subtitle: "The hall",
     text: "You continue to walk throughout the whole school. Suddenly, you hear a noise from the center hall. It seems like they’re footsteps. Maybe you’re not here alone after all !",
     img: "assets/hall.jpg",
+    video: "assets/someone_walking_at_night.mp4",
     option: [
       {
         text: "Follow the noise",
@@ -238,10 +240,12 @@ function goToChapter(chapterName) {
   let chapitre = chaptersObj[chapterName];
   document.querySelector("h2").innerHTML = chapitre.subtitle;
   document.querySelector("p").innerHTML = chapitre.text;
-  document.querySelector("img").src = chapitre.img;
+  let video = document.querySelector(".image");
+  // document.querySelector("video").src = chapitre.video;
+  // document.querySelector("img").src = chapitre.img;
 
-  // let choices = document.querySelector(".button");
   let choicesArr = chapitre.option;
+  // let choices = document.querySelector(".button");
   // console.log(choicesArr[length].action);
   // console.log(choicesArr.length);
 
@@ -250,6 +254,15 @@ function goToChapter(chapterName) {
     button += `<button onclick="${choicesArr[i].action}">${choicesArr[i].text}</button>`;
   }
   document.querySelector(".menu").innerHTML = button;
+
+  let imgTurnedVideo = "";
+  if (chapitre.video != undefined) {
+    imgTurnedVideo += `<video src="${chapitre.video}" muted loop autoplay></video>`;
+    video.innerHTML = imgTurnedVideo;
+  } else {
+    imgTurnedVideo += `<img src="${chapitre.img}"></img>`;
+    video.innerHTML = imgTurnedVideo;
+  }
 }
 
 goToChapter("a_new_beginning");
