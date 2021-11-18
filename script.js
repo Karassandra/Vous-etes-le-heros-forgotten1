@@ -241,6 +241,7 @@ function goToChapter(chapterName) {
   document.querySelector("h2").innerHTML = chapitre.subtitle;
   document.querySelector("p").innerHTML = chapitre.text;
   let video = document.querySelector(".image");
+  let menu = document.querySelector(".menu");
   // document.querySelector("video").src = chapitre.video;
   // document.querySelector("img").src = chapitre.img;
 
@@ -253,7 +254,7 @@ function goToChapter(chapterName) {
   for (let i = 0; i < choicesArr.length; i++) {
     button += `<button onclick="${choicesArr[i].action}">${choicesArr[i].text}</button>`;
   }
-  document.querySelector(".menu").innerHTML = button;
+  menu.innerHTML = button;
 
   let imgTurnedVideo = "";
   if (chapitre.video != undefined) {
@@ -264,5 +265,13 @@ function goToChapter(chapterName) {
     video.innerHTML = imgTurnedVideo;
   }
 }
+
+const sheesh = new Audio("assets/sheesh.mp3");
+let menu = document.querySelector(".menu");
+
+menu.addEventListener("click", function () {
+  menu.classList.add(".play");
+  sheesh.play();
+});
 
 goToChapter("a_new_beginning");
