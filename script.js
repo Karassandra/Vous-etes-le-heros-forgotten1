@@ -270,8 +270,11 @@ const sheesh = new Audio("assets/sheesh.mp3");
 let menu = document.querySelector(".menu");
 
 menu.addEventListener("click", function () {
+  sheesh.currentTime = 0;
   menu.classList.add(".play");
   sheesh.play();
 });
+
+localStorage.setItem("goToChapter", "chaptersObj");
 
 goToChapter("a_new_beginning");
