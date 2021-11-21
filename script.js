@@ -230,9 +230,13 @@ let chaptersObj = {
 };
 
 let picture = false;
+if (localStorage.getItem("picture") != null) { // Est-ce que picture est sauvegardé?
+  picture = localStorage.getItem("picture") == "true" // Si oui, changeons la valeur de la variable picture avec ce qui se trouve dans la sauvegarde
+}
 
 function pocket() {
   picture = true;
+  localStorage.setItem("picture", picture); //On change la variable donc on sauvegarde sa nouvelle valeur
   goToChapter("noise");
 }
 
@@ -242,13 +246,7 @@ function goToChapter(chapterName) {
   document.querySelector("p").innerHTML = chapitre.text;
   let video = document.querySelector(".image");
   let menu = document.querySelector(".menu");
-  // document.querySelector("video").src = chapitre.video;
-  // document.querySelector("img").src = chapitre.img;
-
   let choicesArr = chapitre.option;
-  // let choices = document.querySelector(".button");
-  // console.log(choicesArr[length].action);
-  // console.log(choicesArr.length);
 
   let button = "";
   for (let i = 0; i < choicesArr.length; i++) {
@@ -264,17 +262,15 @@ function goToChapter(chapterName) {
     imgTurnedVideo += `<img src="${chapitre.img}"></img>`;
     video.innerHTML = imgTurnedVideo;
   }
+
+  sheesh.currentTime = 0;
+  sheesh.play();
 }
 
 const sheesh = new Audio("assets/sheesh.mp3");
-let menu = document.querySelector(".menu");
 
-menu.addEventListener("click", function () {
-  sheesh.currentTime = 0;
-  menu.classList.add(".play");
-  sheesh.play();
-});
-
-localStorage.setItem("goToChapter", "chaptersObj");
-
-goToChapter("a_new_beginning");
+let currentchapter = 'a_new_beginning'; // Chapitre de départ par défaut
+if (localStorage.getItem("chapter") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
+  currentchapter = localStorage.getItem("chapter") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
+}
+goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
