@@ -241,6 +241,7 @@ function pocket() {
 }
 
 function goToChapter(chapterName) {
+  localStorage.setItem("chapter", chapterName); // Sauvegardons à quel chapitre nous sommes rendu
   let chapitre = chaptersObj[chapterName];
   document.querySelector("h2").innerHTML = chapitre.subtitle;
   document.querySelector("p").innerHTML = chapitre.text;
@@ -271,6 +272,6 @@ const sheesh = new Audio("assets/sheesh.mp3");
 
 let currentchapter = 'a_new_beginning'; // Chapitre de départ par défaut
 if (localStorage.getItem("chapter") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
-  currentchapter = localStorage.getItem("chapter") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
+  currentchapter = localStorage.getItem("chapter"); // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
 goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
