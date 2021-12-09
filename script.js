@@ -182,7 +182,7 @@ let chaptersObj = {
     option: [
       {
         text: "Try again :)",
-        action: "goToChapter('a_new_beginning')",
+        action: "reset()",
       },
     ],
   },
@@ -241,6 +241,11 @@ function pocket() {
   goToChapter("noise");
 }
 
+let buttonReset = document.querySelector(".reset");
+
+let son = document.querySelector("#son");
+let sound = true;
+
 function goToChapter(chapterName) {
   localStorage.setItem("chapter", chapterName);
   let chapitre = chaptersObj[chapterName];
@@ -265,8 +270,29 @@ function goToChapter(chapterName) {
     video.innerHTML = imgTurnedVideo;
   }
 
-  sheesh.currentTime = 0;
-  sheesh.play();
+  if (son.checked === true) {
+    sound = true;
+  } else {
+    sound = false;
+  }
+
+  if (sound === true) {
+    sheesh.currentTime = 0;
+    sheesh.play();
+  }
+
+  if (
+    chapterName == "mort_beginning" ||
+    chapterName == "mort_picture" ||
+    chapterName == "mort_shadow_person" ||
+    chapterName == "mort_torture_1" ||
+    chapterName == "mort_torture_2" ||
+    chapterName == "mort_you_dont_have_it"
+  ) {
+    buttonReset.classList.add("invisible");
+  } else {
+    buttonReset.classList.remove("invisible");
+  }
 }
 
 const sheesh = new Audio("assets/sheesh.mp3");
@@ -275,5 +301,18 @@ let currentChapter = "a_new_beginning";
 if (localStorage.getItem("chapter") != null) {
   currentChapter = localStorage.getItem("chapter");
 }
+
+buttonReset.addEventListener("click", function () {
+  picture = false;
+  localStorage.clear();
+  goToChapter("a_new_beginning");
+});
+
+let body = document.querySelector("body");
+
+body.addEventListener("", function () {
+  body.classList.add("mort_beginning");
+  body.className = chapterName;
+});
 
 goToChapter(currentChapter);

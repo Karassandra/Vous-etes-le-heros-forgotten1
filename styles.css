@@ -86,3 +86,37 @@ button:hover {
   background-color: #a01a08;
   border-color: #a01a08;
 }
+
+.reset button {
+  color: #010001;
+  background-color: #e2453a;
+  font-family: "Comfortaa";
+  border-radius: 5px;
+  border-color: #e2453a;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  position: absolute;
+  bottom: 840px;
+  right: 31%;
+  font-size: 60%;
+}
+
+.reset button:hover {
+  background-color: #a01a08;
+  border-color: #a01a08;
+}
+
+.sound {
+  display: inline-block;
+  position: absolute;
+  bottom: 848px;
+  left: 31%;
+  color: white;
+}
+
+.invisible {
+  display: none;
+}
