@@ -120,3 +120,39 @@ button:hover {
 .invisible {
   display: none;
 }
+
+/* A NEW BEGINNING CREEPY */
+.a_new_beginning_creepy {
+  background-image: url("assets/Gon-Aura-Transform.png");
+}
+
+.a_new_beginning_creepy .game {
+  background-color: rgb(52, 7, 4, 0.8);
+}
+
+/* THE REVELATION */
+.the_revelation {
+  background-color: rgb(253, 237, 201);
+}
+
+.the_revelation .game {
+  background-color: rgb(255, 224, 157);
+}
+
+.the_revelation .texte {
+  color: white;
+}
+
+.the_revelation .logo {
+  color: white;
+}
+
+.the_revelation .chapitre1 {
+  color: white;
+}
+
+.the_revelation button {
+  color: white;
+  background-color: rgb(245, 192, 79);
+  border-color: rgb(245, 192, 79);
+}

@@ -293,6 +293,10 @@ function goToChapter(chapterName) {
   } else {
     buttonReset.classList.remove("invisible");
   }
+
+  let body = document.querySelector("body");
+
+  body.className = chapterName;
 }
 
 const sheesh = new Audio("assets/sheesh.mp3");
@@ -302,17 +306,10 @@ if (localStorage.getItem("chapter") != null) {
   currentChapter = localStorage.getItem("chapter");
 }
 
-buttonReset.addEventListener("click", function () {
+function reset() {
   picture = false;
   localStorage.clear();
   goToChapter("a_new_beginning");
-});
-
-let body = document.querySelector("body");
-
-body.addEventListener("", function () {
-  body.classList.add("mort_beginning");
-  body.className = chapterName;
-});
+}
 
 goToChapter(currentChapter);
